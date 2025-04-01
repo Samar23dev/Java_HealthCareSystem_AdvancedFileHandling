@@ -1,0 +1,143 @@
+[2025-04-01 23:33] Loaded 7 users
+[2025-04-01 23:33] Loaded 1 appointments
+[2025-04-01 23:33] Loaded 1 medical records
+[2025-04-01 23:33] Displayed login menu
+[2025-04-01 23:33] User input: 1
+[2025-04-01 23:33] User admin logged in
+[2025-04-01 23:33] Login successful! Welcome, Admin User!
+[2025-04-01 23:33] Displayed admin menu
+[2025-04-01 23:33] User input: 2
+[2025-04-01 23:33] Viewed all doctors
+[2025-04-01 23:33] Displayed admin menu
+[2025-04-01 23:33] User input: 3
+[2025-04-01 23:33] Viewed all patients
+[2025-04-01 23:33] Displayed admin menu
+[2025-04-01 23:33] User input: 3
+[2025-04-01 23:33] Viewed all patients
+[2025-04-01 23:33] Displayed admin menu
+[2025-04-01 23:33] User input: 1
+[2025-04-01 23:34] New doctor added: drshivani
+[2025-04-01 23:34] Doctor added successfully!
+[2025-04-01 23:34] Displayed admin menu
+[2025-04-01 23:35] User input: 2
+[2025-04-01 23:35] Viewed all doctors
+[2025-04-01 23:35] Displayed admin menu
+[2025-04-01 23:35] User input: 3
+[2025-04-01 23:35] Viewed all patients
+[2025-04-01 23:35] Displayed admin menu
+[2025-04-01 23:35] User input: 4
+[2025-04-01 23:35] Viewed all appointments
+[2025-04-01 23:35] Displayed admin menu
+[2025-04-01 23:35] User input: 5
+[2025-04-01 23:35] User admin logged out
+[2025-04-01 23:35] Logged out successfully!
+[2025-04-01 23:35] Displayed login menu
+[2025-04-01 23:35] User input: 0
+[2025-04-01 23:35] System shutdown
+[2025-04-02 00:35] Loaded 7 users
+[2025-04-02 00:35] Loaded 1 appointments
+[2025-04-02 00:35] Loaded 1 medical records
+[2025-04-02 00:35] Displayed login menu
+[2025-04-02 00:35] User input: 1
+[2025-04-02 00:35] User admin logged in
+[2025-04-02 00:35] Login successful! Welcome, Admin User!
+[2025-04-02 00:35] Displayed admin menu
+[2025-04-02 00:35] User input: 1
+[2025-04-02 00:36] New doctor added: drarya
+[2025-04-02 00:36] Doctor added successfully!
+[2025-04-02 00:36] Displayed admin menu
+[2025-04-02 00:36] User input: 2
+[2025-04-02 00:36] Viewed all doctors
+[2025-04-02 00:36] Displayed admin menu
+[2025-04-02 00:36] User input: 3
+[2025-04-02 00:36] Viewed all patients
+[2025-04-02 00:36] Displayed admin menu
+[2025-04-02 00:36] User input: 4
+[2025-04-02 00:36] Viewed all appointments
+[2025-04-02 00:36] Displayed admin menu
+[2025-04-02 00:36] User input: 5
+[2025-04-02 00:36] User admin logged out
+[2025-04-02 00:36] Logged out successfully!
+[2025-04-02 00:36] Displayed login menu
+[2025-04-02 00:36] User input: 0
+[2025-04-02 00:36] System shutdown
+[2025-04-02 00:38] Loaded 8 users
+[2025-04-02 00:38] Loaded 1 appointments
+[2025-04-02 00:38] Loaded 1 medical records
+[2025-04-02 00:38] Displayed login menu
+[2025-04-02 00:38] User input: 2
+[2025-04-02 00:38] New patient registered: shubh
+[2025-04-02 00:38] Registration successful! You can now login.
+[2025-04-02 00:38] Displayed login menu
+[2025-04-02 00:38] User input: 1
+[2025-04-02 00:38] User shubh logged in
+[2025-04-02 00:38] Login successful! Welcome, Shubh Kumar!
+[2025-04-02 00:38] Displayed patient menu
+[2025-04-02 00:38] User input: 1
+[2025-04-02 00:38] Patient viewed profile
+[2025-04-02 00:38] Displayed patient menu
+[2025-04-02 00:38] User input: 2
+[2025-04-02 00:38] Viewed all doctors
+[2025-04-02 00:38] Displayed patient menu
+[2025-04-02 00:38] User input: 3
+[2025-04-02 00:39] New appointment booked with doctor: drsahil
+[2025-04-02 00:39] Appointment booked successfully!
+[2025-04-02 00:39] Displayed patient menu
+[2025-04-02 00:39] User input: 5
+[2025-04-02 00:39] Patient viewed appointments
+[2025-04-02 00:39] Displayed patient menu
+[2025-04-02 00:39] User input: 6
+[2025-04-02 00:39] User shubh logged out
+[2025-04-02 00:39] Logged out successfully!
+[2025-04-02 00:39] Displayed login menu
+[2025-04-02 00:39] User input: 1
+[2025-04-02 00:39] User drsahil logged in
+[2025-04-02 00:39] Login successful! Welcome, Dr. Sahil J. Dulani!
+[2025-04-02 00:39] Displayed doctor menu
+[2025-04-02 00:39] User input: 1
+[2025-04-02 00:39] Doctor viewed appointments
+[2025-04-02 00:39] Displayed doctor menu
+[2025-04-02 00:39] User input: 2
+[2025-04-02 00:40] Created medical record for appointment: 3f991566-6230-4a52-8fd1-6414054b2a40
+[2025-04-02 00:40] Medical record created and appointment marked as completed!
+[2025-04-02 00:40] Displayed doctor menu
+[2025-04-02 00:40] User input: 3
+[2025-04-02 00:40] Viewed medical records for patient: shubh
+[2025-04-02 00:40] Displayed doctor menu
+[2025-04-02 00:41] User input: 4
+[2025-04-02 00:41] User drsahil logged out
+[2025-04-02 00:41] Logged out successfully!
+[2025-04-02 00:41] Displayed login menu
+[2025-04-02 00:41] User input: 1
+[2025-04-02 00:41] User shubh logged in
+[2025-04-02 00:41] Login successful! Welcome, Shubh Kumar!
+[2025-04-02 00:41] Displayed patient menu
+[2025-04-02 00:41] User input: 5
+[2025-04-02 00:41] Patient viewed appointments
+[2025-04-02 00:41] Displayed patient menu
+[2025-04-02 00:41] User input: 4
+[2025-04-02 00:41] Viewed medical records for patient: shubh
+[2025-04-02 00:41] Displayed patient menu
+[2025-04-02 00:41] User input: 6
+[2025-04-02 00:41] User shubh logged out
+[2025-04-02 00:41] Logged out successfully!
+[2025-04-02 00:41] Displayed login menu
+[2025-04-02 00:42] User input: 1
+[2025-04-02 00:42] User admin logged in
+[2025-04-02 00:42] Login successful! Welcome, Admin User!
+[2025-04-02 00:42] Displayed admin menu
+[2025-04-02 00:42] User input: 2
+[2025-04-02 00:42] Viewed all doctors
+[2025-04-02 00:42] Displayed admin menu
+[2025-04-02 00:42] User input: 3
+[2025-04-02 00:42] Viewed all patients
+[2025-04-02 00:42] Displayed admin menu
+[2025-04-02 00:42] User input: 4
+[2025-04-02 00:42] Viewed all appointments
+[2025-04-02 00:42] Displayed admin menu
+[2025-04-02 00:42] User input: 5
+[2025-04-02 00:42] User admin logged out
+[2025-04-02 00:42] Logged out successfully!
+[2025-04-02 00:42] Displayed login menu
+[2025-04-02 00:42] User input: 0
+[2025-04-02 00:42] System shutdown

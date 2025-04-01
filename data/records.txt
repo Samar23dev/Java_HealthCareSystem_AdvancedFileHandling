@@ -1,0 +1,3 @@
+# ID|DOCTOR_USERNAME|PATIENT_USERNAME|APPOINTMENT_ID|DIAGNOSIS|PRESCRIPTION|NOTES|DATE
+25d6e977-f91e-4525-8810-7850d58f6cd4|drsingh|raj|3ab25a44-605b-46cf-b1ab-2b673dcbd6b5|Complete Body Check Up , Blood test , Diabetes Test|avoid eating artificial sugar items , consumes only Natural sugar|None|2025-04-01
+55ad8432-32cb-4765-a89a-99f95cd43bb5|drsahil|shubh|3f991566-6230-4a52-8fd1-6414054b2a40|Muscles Checkup and Utrasound|None|Exercise daily wait for next report|2025-04-02

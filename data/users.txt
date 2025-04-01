@@ -1,0 +1,10 @@
+# TYPE|USERNAME|PASSWORD|NAME|SPECIALIZATION|FEES|DOB|PHONE
+ADMIN|admin|admin123|Admin User
+DOCTOR|drsahil|sahil123|Dr. Sahil J. Dulani|Cardiology|150.0
+DOCTOR|drsanjay|sanjay123|Dr. Sanjay K. Singh|Pediatrics|120.0
+PATIENT|pat1|pat123|Rahul K.|1990-05-15|123-456-7890
+DOCTOR|drsingh|singh123|Dr Singhania |Dentist|145.0
+PATIENT|raj|12345|Raj Singh|2004-09-09|1234567890
+DOCTOR|drsunita|123|Dr Sunita Bansal|Brain Surgery|980.0
+DOCTOR|drarya|arya123|Arya Mittal|Diabetics , Blood Pressure|200.0
+PATIENT|shubh|12345|Shubh Kumar|2001-09-08|1234567892
