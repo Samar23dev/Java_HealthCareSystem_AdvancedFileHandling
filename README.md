@@ -4,103 +4,49 @@
 ![OOP](https://img.shields.io/badge/OOP-Yes-success)
 ![File-Based](https://img.shields.io/badge/Storage-File%20Based-yellow)
 
-A Java-based healthcare management system for scheduling appointments, managing patient records, and handling doctor-patient interactions.
+A console-based healthcare management system built with Java for scheduling appointments, managing medical records, and handling doctor-patient interactions.
 
 ## Features
 
 ### User Roles
-- **Admin**: Add doctors, view all users/appointments
+- **Admin**: Add/view doctors, view all records
 - **Doctor**: Manage appointments, create medical records
 - **Patient**: Book appointments, view medical history
 
 ### Core Functionalities
-- 📅 Appointment booking system
-- 🏥 Doctor specialization management
+- 📅 Role-based authentication
+- 🏥 Appointment booking system
 - 📝 Digital medical records
-- 🔐 Role-based authentication
-- 📊 Data persistence (text files)
-Installation
-Requirements:
+- 💾 File-based data persistence
+- 📊 Console UI with formatted tables
 
-Java 17+
+## How to Run
 
-Maven (for building)
+1. **Requirements**:
+   - Java 17 or later
+   - Git (optional)
 
-# Run the system:
-git clone https://github.com/your-repo/healthcare-system.git
-cd healthcare-system
-java HealthCareSystem.java
+2. **From source**:
+   ```bash
+   git clone https://github.com/your-username/healthcare-system.git
+   cd healthcare-system/src
+   javac *.java
+   java HealthCareSystem
 
-# File Structure
-healthcare-system/
-├── data/               # Storage files
-│   ├── users.txt
-│   ├── appointments.txt
-│   └── records.txt
-├── src/
-│   ├── HealthCareSystem.java  # Main class
-│   ├── User.java              # Base user class
-│   ├── Admin.java             # Admin functions
-│   ├── Doctor.java            # Doctor functions
-│   ├── Patient.java           # Patient functions
-│   ├── Appointment.java       # Appointment logic
-│   └── MedicalRecord.java     # Medical records
-└── README.md
+# Project Structure
+![image](https://github.com/user-attachments/assets/6ef6695b-0149-4efb-84c9-b614761b1a82)
 
-# Usage Examples
-As Admin
-1. Add Doctor
-2. View All Doctors
-3. View All Patients
-4. View All Appointments
-As Doctor
-1. View My Appointments
-2. Create Medical Record
-3. View Patient Records
-As Patient
-1. Book Appointment
-2. View Medical Records
-3. Check Appointment Status
-Data Storage Format
-users.txt:
+# Data Storage
+Files are saved in data/ directory:
 
-TYPE|USERNAME|PASSWORD|NAME|SPECIALIZATION|FEES|DOB|PHONE
-DOCTOR|drsmith|smith123|Dr. Smith|Cardiology|150
-PATIENT|john|john123|John Doe|1990-01-01|123-456-7890
+users.txt - All user accounts
 
+appointments.txt - Appointment records
 
-# Contributing
-Fork the project
-
-Create your feature branch (git checkout -b feature/fooBar)
-
-Commit your changes (git commit -am 'Add some fooBar')
-
-Push to the branch (git push origin feature/fooBar)
-
-Open a Pull Request
-
+records.txt - Medical histories
 
 License
-MIT © [Samar Mittal]
+[MIT License]
 
----
 
-### Key Sections Included:
-1. **Badges** - Quick tech stack overview
-2. **Visual Diagrams** - MermaidJS class diagram
-3. **File Structure** - Clear project organization
-4. **Usage Examples** - Sample menu flows
-5. **Data Formats** - Shows how data is stored
-6. **Contributing Guide** - Standard GitHub workflow
 
-To use this:
-1. Copy the entire content
-2. Paste into a new `README.md` file in your project root
-3. Update the repository link and license info
-4. Commit to GitHub
-
-Would you like me to add any specific sections like:
-- Screenshots of console output?
-- Detailed setup instructions for beginners?
-- Error handling documentation?
