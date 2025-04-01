@@ -19,23 +19,6 @@ A Java-based healthcare management system for scheduling appointments, managing 
 - 📝 Digital medical records
 - 🔐 Role-based authentication
 - 📊 Data persistence (text files)
-
-## Class Diagram
-```mermaid
-classDiagram
-    class User {
-        +String username
-        +String password
-        +String name
-    }
-    User <|-- Admin
-    User <|-- Doctor
-    User <|-- Patient
-    class Appointment {
-        +bookAppointment()
-    }
-    Appointment --> Doctor
-    Appointment --> Patient
 Installation
 Requirements:
 
@@ -43,12 +26,12 @@ Java 17+
 
 Maven (for building)
 
-Run the system:
+# Run the system:
 git clone https://github.com/your-repo/healthcare-system.git
 cd healthcare-system
 java HealthCareSystem.java
 
-File Structure
+# File Structure
 healthcare-system/
 ├── data/               # Storage files
 │   ├── users.txt
@@ -64,7 +47,7 @@ healthcare-system/
 │   └── MedicalRecord.java     # Medical records
 └── README.md
 
-Usage Examples
+# Usage Examples
 As Admin
 1. Add Doctor
 2. View All Doctors
@@ -86,7 +69,7 @@ DOCTOR|drsmith|smith123|Dr. Smith|Cardiology|150
 PATIENT|john|john123|John Doe|1990-01-01|123-456-7890
 
 
-Contributing
+# Contributing
 Fork the project
 
 Create your feature branch (git checkout -b feature/fooBar)
