@@ -141,3 +141,39 @@
 [2025-04-02 00:42] Displayed login menu
 [2025-04-02 00:42] User input: 0
 [2025-04-02 00:42] System shutdown
+[2025-04-02 12:07] Loaded 9 users
+[2025-04-02 12:07] Loaded 2 appointments
+[2025-04-02 12:07] Loaded 2 medical records
+[2025-04-02 12:07] Displayed login menu
+[2025-04-02 13:50] Loaded 9 users
+[2025-04-02 13:50] Loaded 2 appointments
+[2025-04-02 13:50] Loaded 2 medical records
+[2025-04-02 13:50] Displayed login menu
+[2025-04-02 13:50] User input: 1
+[2025-04-02 13:50] User admin logged in
+[2025-04-02 13:50] Login successful! Welcome, Admin User!
+[2025-04-02 13:50] Displayed admin menu
+[2025-04-02 13:50] User input: 2
+[2025-04-02 13:50] Viewed all doctors
+[2025-04-02 13:50] Displayed admin menu
+[2025-04-02 13:50] User input: 3
+[2025-04-02 13:50] Viewed all patients
+[2025-04-02 13:50] Displayed admin menu
+[2025-04-02 13:52] User input: 4
+[2025-04-02 13:52] Viewed all appointments
+[2025-04-02 13:52] Displayed admin menu
+[2025-04-02 13:52] User input: 1
+[2025-04-02 13:52] New doctor added: drjay
+[2025-04-02 13:52] Doctor added successfully!
+[2025-04-02 13:52] Displayed admin menu
+[2025-04-02 13:52] User input: 2
+[2025-04-02 13:52] Viewed all doctors
+[2025-04-02 13:52] Displayed admin menu
+[2025-04-02 13:52] User input: 3
+[2025-04-02 13:52] Viewed all patients
+[2025-04-02 13:52] Displayed admin menu
+[2025-04-02 13:52] User input: 4
+[2025-04-02 13:52] Viewed all appointments
+[2025-04-02 13:52] Displayed admin menu
+[2025-04-02 13:52] User input: 0
+[2025-04-02 13:52] System shutdown
