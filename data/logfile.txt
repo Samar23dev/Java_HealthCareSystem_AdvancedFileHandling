@@ -177,3 +177,24 @@
 [2025-04-02 13:52] Displayed admin menu
 [2025-04-02 13:52] User input: 0
 [2025-04-02 13:52] System shutdown
+[2025-04-09 23:58] Loaded 10 users
+[2025-04-09 23:58] Loaded 2 appointments
+[2025-04-09 23:58] Loaded 2 medical records
+[2025-04-09 23:58] Displayed login menu
+[2025-04-09 23:58] User input: 1
+[2025-04-09 23:59] Failed login attempt for username: 1
+[2025-04-09 23:59] Invalid username or password!
+[2025-04-09 23:59] Displayed login menu
+[2025-04-09 23:59] User input: 1
+[2025-04-09 23:59] User admin logged in
+[2025-04-09 23:59] Login successful! Welcome, Admin User!
+[2025-04-09 23:59] Displayed admin menu
+[2025-04-09 23:59] User input: 2
+[2025-04-09 23:59] Viewed all doctors
+[2025-04-09 23:59] Displayed admin menu
+[2025-04-09 23:59] User input: 3
+[2025-04-09 23:59] Viewed all patients
+[2025-04-09 23:59] Displayed admin menu
+[2025-04-09 23:59] User input: 4
+[2025-04-09 23:59] Viewed all appointments
+[2025-04-09 23:59] Displayed admin menu
