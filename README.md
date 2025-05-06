@@ -2,56 +2,83 @@
 
 ![Java](https://img.shields.io/badge/Java-17%2B-blue)
 ![OOP](https://img.shields.io/badge/OOP-Yes-success)
-![File-Based](https://img.shields.io/badge/Storage-File%20Based-yellow)
+![Storage](https://img.shields.io/badge/Storage-Object%20Serialization-purple)
 
-A console-based healthcare management system built with Java for scheduling appointments, managing medical records, and handling doctor-patient interactions.
+A console-based healthcare management system written in Java, using object serialization for data persistence. Supports role-based access (Admin, Doctor, Patient), appointment scheduling, and medical record management.
 
 ## Features
 
 ### User Roles
-- **Admin**: Add/view doctors, view all records
-- **Doctor**: Manage appointments, create medical records
-- **Patient**: Book appointments, view medical history
+- **Admin**: Add/view doctors, view all patients and appointments.
+- **Doctor**: View own appointments, create and view patient medical records.
+- **Patient**: Register an account, book appointments, view own profile and medical history.
 
-### Core Functionalities
-- 📅 Role-based authentication
-- 🏥 Appointment booking system
-- 📝 Digital medical records
-- 💾 File-based data persistence
-- 📊 Console UI with formatted tables
+### Core Functionality
+- 🔐 Role-based login and logout flow
+- 🏥 Appointment booking and management
+- 📝 Medical record creation and viewing
+- 💾 Binary data persistence using Java serialization
+- 📊 Clean console UI with formatted tables
 
-## How to Run
+## Requirements
 
-1. **Requirements**:
-   - Java 17 or later
-   - Git (optional)
+- Java 17 or later
 
-2. **From source**:
+## Setup & Run
+
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Samar23dev/Java_HealthCareSystem_AdvancedFileHandling.git
-   cd healthcare-system/src
+   cd JavaFilehandlingHealthCareSystem
+   ```
+2. **Compile**
+   ```bash
    javac *.java
+   ```
+3. **Run**
+   ```bash
    java HealthCareSystem
+   ```
 
-# Project Structure
-![image](https://github.com/user-attachments/assets/6ef6695b-0149-4efb-84c9-b614761b1a82)
-![image](https://github.com/user-attachments/assets/a838a5c6-4037-4c62-8bf8-cfd88f0db251)
-![image](https://github.com/user-attachments/assets/fd30acb8-3323-4aa2-90df-10bc3646b348)
-![image](https://github.com/user-attachments/assets/5269ae4b-a30d-4020-94b6-1988a16ff256)
-![image](https://github.com/user-attachments/assets/5ab4ceb7-5a89-4070-841c-a5c61474f0fa)
+On first run, the system initializes the `data/` directory and creates three serialized files with default admin credentials.
 
+## Default Credentials
 
-# Data Storage
-Files are saved in data/ directory:
+- **Admin**: `username: admin` / `password: admin123`
 
-users.txt - All user accounts
+You can then add doctors or register patients through the menus.
 
-appointments.txt - Appointment records
+## Data Storage
 
-records.txt - Medical histories
+All data files are stored in the `data/` folder as serialized objects:
 
-License
-[MIT License]
+- **users.ser**: List of `User` objects (Admin, Doctor, Patient)
+- **appointments.ser**: List of `Appointment` objects
+- **records.ser**: List of `MedicalRecord` objects
+- **logfile.txt**: Audit log of user actions
+
+> **Note**: The old `.txt` files are no longer used by the system and remain only as backups.
+
+## Project Structure
+
+```
+/ (workspace root)
+│
+├── data/                # persisted serialized files and logs
+├── User.java            # base user class (serializable)
+├── Admin.java           # admin role class
+├── Doctor.java          # doctor role class
+├── Patient.java         # patient role class
+├── Appointment.java     # appointment model class
+├── MedicalRecord.java   # medical record model class
+├── ConsoleLogger.java   # simple file logger utility
+├── HealthCareSystem.java# main application entrypoint
+└── README.md            # this documentation
+```
+
+## License
+
+This project is released under the [MIT License](LICENSE).
 
 
 

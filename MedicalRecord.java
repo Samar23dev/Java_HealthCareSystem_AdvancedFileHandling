@@ -1,6 +1,9 @@
 import java.time.*;
 import java.util.*;
-public class MedicalRecord {
+import java.io.Serializable;
+
+public class MedicalRecord implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String id, appointmentId, diagnosis, prescription, notes;
     private Doctor doctor;
     private Patient patient;

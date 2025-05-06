@@ -198,3 +198,114 @@
 [2025-04-09 23:59] User input: 4
 [2025-04-09 23:59] Viewed all appointments
 [2025-04-09 23:59] Displayed admin menu
+[2025-05-06 17:58] Initialized users file
+[2025-05-06 17:58] Initialized appointments file
+[2025-05-06 17:58] Initialized records file
+[2025-05-06 17:58] Error loading data: invalid stream header: 23205459
+[2025-05-06 17:58] Displayed login menu
+[2025-05-06 17:58] User input: 1
+[2025-05-06 17:58] Failed login attempt for username: admin
+[2025-05-06 17:58] Invalid username or password!
+[2025-05-06 17:58] Displayed login menu
+[2025-05-06 17:58] User input: 0
+[2025-05-06 17:58] System shutdown
+[2025-05-06 17:59] Displayed login menu
+[2025-05-06 17:59] User input: 1
+[2025-05-06 17:59] Failed login attempt for username: admin
+[2025-05-06 17:59] Invalid username or password!
+[2025-05-06 17:59] Displayed login menu
+[2025-05-06 17:59] User input: 2
+[2025-05-06 17:59] New patient registered: sam
+[2025-05-06 17:59] Registration successful! You can now login.
+[2025-05-06 17:59] Displayed login menu
+[2025-05-06 17:59] User input: 1
+[2025-05-06 17:59] User sam logged in
+[2025-05-06 17:59] Login successful! Welcome, Samar!
+[2025-05-06 17:59] Displayed patient menu
+[2025-05-06 17:59] User input: 1
+[2025-05-06 17:59] Patient viewed profile
+[2025-05-06 17:59] Displayed patient menu
+[2025-05-06 17:59] User input: 0
+[2025-05-06 17:59] System shutdown
+[2025-05-06 18:00] Displayed login menu
+[2025-05-06 18:00] User input: 1
+[2025-05-06 18:00] Failed login attempt for username: admin
+[2025-05-06 18:00] Invalid username or password!
+[2025-05-06 18:00] Displayed login menu
+[2025-05-06 18:01] Initialized users file
+[2025-05-06 18:01] Initialized appointments file
+[2025-05-06 18:01] Initialized records file
+[2025-05-06 18:01] Displayed login menu
+[2025-05-06 18:01] User input: 1
+[2025-05-06 18:01] User admin logged in
+[2025-05-06 18:01] Login successful! Welcome, Admin User!
+[2025-05-06 18:01] Displayed admin menu
+[2025-05-06 18:01] User input: 2
+[2025-05-06 18:01] Viewed all doctors
+[2025-05-06 18:01] Displayed admin menu
+[2025-05-06 18:01] User input: 3
+[2025-05-06 18:01] Viewed all patients
+[2025-05-06 18:01] Displayed admin menu
+[2025-05-06 18:01] User input: 4
+[2025-05-06 18:01] Viewed all appointments
+[2025-05-06 18:01] Displayed admin menu
+[2025-05-06 18:01] User input: 5
+[2025-05-06 18:01] User admin logged out
+[2025-05-06 18:01] Logged out successfully!
+[2025-05-06 18:01] Displayed login menu
+[2025-05-06 18:01] User input: 2
+[2025-05-06 18:02] New patient registered: sam
+[2025-05-06 18:02] Registration successful! You can now login.
+[2025-05-06 18:02] Displayed login menu
+[2025-05-06 18:02] User input: 1
+[2025-05-06 18:02] User sam logged in
+[2025-05-06 18:02] Login successful! Welcome, Samar!
+[2025-05-06 18:02] Displayed patient menu
+[2025-05-06 18:02] User input: 1
+[2025-05-06 18:02] Patient viewed profile
+[2025-05-06 18:02] Displayed patient menu
+[2025-05-06 18:02] User input: 0
+[2025-05-06 18:02] System shutdown
+[2025-05-06 18:02] Displayed login menu
+[2025-05-06 18:02] User input: 1
+[2025-05-06 18:02] User admin logged in
+[2025-05-06 18:02] Login successful! Welcome, Admin User!
+[2025-05-06 18:02] Displayed admin menu
+[2025-05-06 18:02] User input: 3
+[2025-05-06 18:02] Viewed all patients
+[2025-05-06 18:02] Displayed admin menu
+[2025-05-06 18:02] User input: 5
+[2025-05-06 18:02] User admin logged out
+[2025-05-06 18:02] Logged out successfully!
+[2025-05-06 18:02] Displayed login menu
+[2025-05-06 18:02] User input: 2
+[2025-05-06 18:02] Registration failed - username exists: sam
+[2025-05-06 18:02] Username already exists!
+[2025-05-06 18:02] Displayed login menu
+[2025-05-06 18:02] User input: 1
+[2025-05-06 18:02] User sam logged in
+[2025-05-06 18:02] Login successful! Welcome, Samar!
+[2025-05-06 18:02] Displayed patient menu
+[2025-05-06 18:02] User input: 2
+[2025-05-06 18:02] Viewed all doctors
+[2025-05-06 18:02] Displayed patient menu
+[2025-05-06 18:06] Migrated users from text to serialized format
+[2025-05-06 18:06] Migrated appointments from text to serialized format
+[2025-05-06 18:06] Migrated records from text to serialized format
+[2025-05-06 18:06] Displayed login menu
+[2025-05-06 18:06] User input: 1
+[2025-05-06 18:06] User admin logged in
+[2025-05-06 18:06] Login successful! Welcome, Admin User!
+[2025-05-06 18:06] Displayed admin menu
+[2025-05-06 18:06] User input: 2
+[2025-05-06 18:06] Viewed all doctors
+[2025-05-06 18:06] Displayed admin menu
+[2025-05-06 18:06] User input: 3
+[2025-05-06 18:06] Viewed all patients
+[2025-05-06 18:06] Displayed admin menu
+[2025-05-06 18:06] User input: 4
+[2025-05-06 18:06] Viewed all appointments
+[2025-05-06 18:06] Displayed admin menu
+[2025-05-06 18:06] User input: 0
+[2025-05-06 18:06] System shutdown
+[2025-05-06 18:12] Displayed login menu

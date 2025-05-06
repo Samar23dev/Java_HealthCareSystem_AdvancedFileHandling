@@ -6,9 +6,9 @@ import java.util.*;
 
 public class HealthCareSystem {
     public static String DATA_DIR = "./data/";
-    public static String USERS_FILE = DATA_DIR + "users.txt";
-    public static String APPOINTMENTS_FILE = DATA_DIR + "appointments.txt";
-    public static String RECORDS_FILE = DATA_DIR + "records.txt";
+    public static String USERS_FILE = DATA_DIR + "users.ser";
+    public static String APPOINTMENTS_FILE = DATA_DIR + "appointments.ser";
+    public static String RECORDS_FILE = DATA_DIR + "records.ser";
     public static Scanner scanner = new Scanner(System.in);
     public static DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     public static DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
@@ -56,23 +56,32 @@ public class HealthCareSystem {
     public static void initializeSystem() {
         try {
             Files.createDirectories(Paths.get(DATA_DIR));
+            
+            // Initialize users if file doesn't exist
             if (!Files.exists(Paths.get(USERS_FILE))) {
-                Files.write(Paths.get(USERS_FILE), Arrays.asList(
-                        "# TYPE|USERNAME|PASSWORD|NAME|SPECIALIZATION|FEES|DOB|PHONE",
-                        "ADMIN|admin|admin123|Admin User",
-                        "DOCTOR|drsahil|sahil123|Dr. Sahil J. Dulani|Cardiology|150",
-                        "DOCTOR|drsanjay|sanjay123|Dr. Sanjay K. Singh|Pediatrics|120",
-                        "PATIENT|pat1|pat123|Rahul K.|1990-05-15|123-456-7890"));
+                List<User> initialUsers = new ArrayList<>();
+                initialUsers.add(new Admin("admin", "admin123", "Admin User"));
+                try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(USERS_FILE))) {
+                    oos.writeObject(initialUsers);
+                }
                 ConsoleLogger.logln("Initialized users file");
             }
+
+            // Initialize appointments if file doesn't exist
             if (!Files.exists(Paths.get(APPOINTMENTS_FILE))) {
-                Files.write(Paths.get(APPOINTMENTS_FILE), Collections.singletonList(
-                        "# ID|DOCTOR_USERNAME|PATIENT_USERNAME|DATETIME|PROBLEM|STATUS"));
+                List<Appointment> initialAppointments = new ArrayList<>();
+                try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(APPOINTMENTS_FILE))) {
+                    oos.writeObject(initialAppointments);
+                }
                 ConsoleLogger.logln("Initialized appointments file");
             }
+
+            // Initialize records if file doesn't exist
             if (!Files.exists(Paths.get(RECORDS_FILE))) {
-                Files.write(Paths.get(RECORDS_FILE), Collections.singletonList(
-                        "# ID|DOCTOR_USERNAME|PATIENT_USERNAME|APPOINTMENT_ID|DIAGNOSIS|PRESCRIPTION|NOTES|DATE"));
+                List<MedicalRecord> initialRecords = new ArrayList<>();
+                try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(RECORDS_FILE))) {
+                    oos.writeObject(initialRecords);
+                }
                 ConsoleLogger.logln("Initialized records file");
             }
         } catch (IOException e) {
@@ -82,58 +91,33 @@ public class HealthCareSystem {
 
     public static void loadData() {
         try {
-            List<String> userLines = Files.readAllLines(Paths.get(USERS_FILE));
-            for (String line : userLines) {
-                if (line.startsWith("#"))
-                    continue;
-                String[] parts = line.split("\\|");
-                switch (parts[0]) {
-                    case "ADMIN":
-                        users.add(new Admin(parts[1], parts[2], parts[3]));
-                        break;
-                    case "DOCTOR":
-                        users.add(new Doctor(parts[1], parts[2], parts[3], parts[4], Double.parseDouble(parts[5])));
-                        break;
-                    case "PATIENT":
-                        users.add(new Patient(parts[1], parts[2], parts[3], parts[4], parts[5]));
-                        break;
+            // Load users
+            if (Files.exists(Paths.get(USERS_FILE))) {
+                try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(USERS_FILE))) {
+                    @SuppressWarnings("unchecked")
+                    List<User> loadedUsers = (List<User>) ois.readObject();
+                    users = loadedUsers;
                 }
             }
-            ConsoleLogger.logln("Loaded " + users.size() + " users");
+
+            // Load appointments
             if (Files.exists(Paths.get(APPOINTMENTS_FILE))) {
-                List<String> aptLines = Files.readAllLines(Paths.get(APPOINTMENTS_FILE));
-                for (String line : aptLines) {
-                    if (line.startsWith("#"))
-                        continue;
-                    String[] parts = line.split("\\|");
-                    Doctor doc = (Doctor) findUser(parts[1]);
-                    Patient pat = (Patient) findUser(parts[2]);
-                    if (doc != null && pat != null) {
-                        Appointment apt = new Appointment(parts[0], doc, pat,
-                                LocalDateTime.parse(parts[3], dateTimeFormatter));
-                        apt.setProblem(parts[4]);
-                        apt.setStatus(parts[5]);
-                        appointments.add(apt);
-                    }
+                try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(APPOINTMENTS_FILE))) {
+                    @SuppressWarnings("unchecked")
+                    List<Appointment> loadedAppointments = (List<Appointment>) ois.readObject();
+                    appointments = loadedAppointments;
                 }
-                ConsoleLogger.logln("Loaded " + appointments.size() + " appointments");
             }
+
+            // Load records
             if (Files.exists(Paths.get(RECORDS_FILE))) {
-                List<String> recLines = Files.readAllLines(Paths.get(RECORDS_FILE));
-                for (String line : recLines) {
-                    if (line.startsWith("#"))
-                        continue;
-                    String[] parts = line.split("\\|");
-                    Doctor doc = (Doctor) findUser(parts[1]);
-                    Patient pat = (Patient) findUser(parts[2]);
-                    if (doc != null && pat != null) {
-                        records.add(new MedicalRecord(parts[0], parts[3], doc, pat, parts[4], parts[5], parts[6],
-                                LocalDate.parse(parts[7])));
-                    }
+                try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(RECORDS_FILE))) {
+                    @SuppressWarnings("unchecked")
+                    List<MedicalRecord> loadedRecords = (List<MedicalRecord>) ois.readObject();
+                    records = loadedRecords;
                 }
-                ConsoleLogger.logln("Loaded " + records.size() + " medical records");
             }
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             ConsoleLogger.logln("Error loading data: " + e.getMessage());
         }
     }
@@ -144,36 +128,23 @@ public class HealthCareSystem {
 
     public static void saveData() {
         try {
-            List<String> userLines = new ArrayList<>();
-            userLines.add("# TYPE|USERNAME|PASSWORD|NAME|SPECIALIZATION|FEES|DOB|PHONE");
-            for (User user : users) {
-                if (user instanceof Admin) {
-                    userLines.add("ADMIN|" + user.getUsername() + "|" + user.getPassword() + "|" + user.getName());
-                } else if (user instanceof Doctor d) {
-                    userLines.add("DOCTOR|" + d.getUsername() + "|" + d.getPassword() + "|" + d.getName() + "|"
-                            + d.getSpecialization() + "|" + d.getFees());
-                } else if (user instanceof Patient p) {
-                    userLines.add("PATIENT|" + p.getUsername() + "|" + p.getPassword() + "|" + p.getName() + "|"
-                            + p.getDob() + "|" + p.getPhone());
-                }
+            // Ensure data directory exists
+            Files.createDirectories(Paths.get(DATA_DIR));
+
+            // Save users
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(USERS_FILE))) {
+                oos.writeObject(users);
             }
-            Files.write(Paths.get(USERS_FILE), userLines);
-            List<String> aptLines = new ArrayList<>();
-            aptLines.add("# ID|DOCTOR_USERNAME|PATIENT_USERNAME|DATETIME|PROBLEM|STATUS");
-            for (Appointment apt : appointments) {
-                aptLines.add(apt.getId() + "|" + apt.getDoctor().getUsername() + "|" + apt.getPatient().getUsername()
-                        + "|" + apt.getDateTime().format(dateTimeFormatter) + "|" + apt.getProblem() + "|"
-                        + apt.getStatus());
+
+            // Save appointments
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(APPOINTMENTS_FILE))) {
+                oos.writeObject(appointments);
             }
-            Files.write(Paths.get(APPOINTMENTS_FILE), aptLines);
-            List<String> recLines = new ArrayList<>();
-            recLines.add("# ID|DOCTOR_USERNAME|PATIENT_USERNAME|APPOINTMENT_ID|DIAGNOSIS|PRESCRIPTION|NOTES|DATE");
-            for (MedicalRecord rec : records) {
-                recLines.add(rec.getId() + "|" + rec.getDoctor().getUsername() + "|" + rec.getPatient().getUsername()
-                        + "|" + rec.getAppointmentId() + "|" + rec.getDiagnosis() + "|" + rec.getPrescription() + "|"
-                        + rec.getNotes() + "|" + rec.getDate().format(dateFormatter));
+
+            // Save records
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(RECORDS_FILE))) {
+                oos.writeObject(records);
             }
-            Files.write(Paths.get(RECORDS_FILE), recLines);
         } catch (IOException e) {
             ConsoleLogger.logln("Error saving data: " + e.getMessage());
         }

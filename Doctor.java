@@ -1,4 +1,7 @@
-public class Doctor extends User {
+import java.io.Serializable;
+
+public class Doctor extends User implements Serializable {
+    private static final long serialVersionUID = 1L;
     public String specialization;
     public double fees;
 

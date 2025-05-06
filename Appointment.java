@@ -1,7 +1,9 @@
+import java.io.Serializable;
 import java.time.*;
 import java.util.*;
 
-public class Appointment {
+public class Appointment implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String id, problem = "General Checkup", status;
     private Doctor doctor;
     private Patient patient;

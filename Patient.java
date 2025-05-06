@@ -1,4 +1,7 @@
-public class Patient extends User {
+import java.io.Serializable;
+
+public class Patient extends User implements Serializable {
+    private static final long serialVersionUID = 1L;
     public String dob, phone;
     public Patient(String username, String password, String name, String dob, String phone) {
         super(username, password, name);
